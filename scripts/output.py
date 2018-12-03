@@ -128,6 +128,7 @@ with tf.Session() as sess:
     # Initialize image enhance variables
     imgpath = '../data/dataset/origin/'
     path_list = os.listdir(imgpath)
+    path_list.sort(key=lambda x: int(x[:-4]))
     # For training image, use sort
     # path_list.sort(key=lambda x:int(x[:-4]))
     tmppath = '../tmp/tmpimg/'
@@ -183,7 +184,7 @@ with tf.Session() as sess:
             for _ in range(3):
                 outputdata, outputlabel = sess.run(next_op)
                 result = sess.run(recog, feed_dict={x1: outputdata, y1: np.ones([1, 4096], dtype='float')})
-                if result == 0:
+                if result == 1:
                     li[_] = 1
                     flag = 1
         with open('../result.txt', 'a+') as fout:

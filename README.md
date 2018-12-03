@@ -7,7 +7,7 @@ Detect the defect of products using deep neural network
 - opencv 4.0
 ## Usage
 ### For output the result with pre-trained network
-- Download the pre-trained data zip from here and unzip at the root directory
+- Download the pre-trained data zip from [here](https://pan.baidu.com/s/1Np4eGNHFdNUVp5-ra25b_w) and unzip at the root directory
 - Copy the test-needed images to `./data/dataset/origin`
 - Run the  `./scripts/output.py` to get the result, the file `result.txt` is placed at the root directory 
 - Run the  `./scripts/outputvisual.py` to get the visual result with dividing the image with three parts, which is labeled with `pass`, `slant`(焊偏), `black`(焊黑)
